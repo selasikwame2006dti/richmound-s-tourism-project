@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardians of Green: Forests of Ghana</title>
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            color: #333;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    background-color: bisque;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(92, 56, 10);
+    font-size: 1rem;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+
+        .intro-section {
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-image: url('In Shai Hills, Ghana, Take A Break from Civilization.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .intro-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-section div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .forest-section {
+            padding: 20px;
+        }
+
+        .forest-item {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            margin: 30px auto;
+            opacity: 0;
+            transform: rotateY(90deg); /* Rotate for 3D effect */
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .forest-item.show {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+        .forest-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .forest-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .forest-item .text {
+            padding: 15px;
+        }
+
+        footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+footer h4 {
+    margin-bottom: 0.5rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+            .forest-section {
+                padding: 40px;
+            }
+
+            .forest-item {
+                flex-direction: row;
+                width: 90%;
+                margin: 40px auto;
+            }
+
+            .forest-item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .forest-item img {
+                width: 50%;
+            }
+
+            .forest-item .text {
+                width: 50%;
+                padding: 20px;
+            }
+
+            .forest-item img:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .forest-item {
+                width: 100%;
+            }
+
+            footer {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 200px) {
+            body {
+                font-size: 14px;
+            }
+        }
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="ghtour.png" alt="Ghana Tour Logo" height="50px" width="200px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="places.html">About Us</a></li>
+                <li><a href="#" class="button">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro-section">
+        <div>
+            <h1>Guardians of Green: Forests of Ghana</h1>
+            <p>Exploring the vital ecosystems that shape Ghana's natural beauty.</p>
+        </div>
+    </section>
+
+    <section class="forest-section">
+        <div class="forest-item">
+            <img src="Kakum National Park - Ghana.jpg" alt="Kakum National Park" onclick="alert('Kakum National Park Image Clicked!')">
+            <div class="text">
+                <h3>Kakum National Park: A Canopy of Wonders</h3>
+                <p>
+                    Kakum National Park: A Canopy of Wonders</h3>
+                    <p>Kakum National Park is renowned for its canopy walkway, a series of suspension bridges that offer breathtaking views of the rainforest. The park is home to a diverse array of wildlife, including forest elephants, monkeys, and numerous bird species. It's a must-visit for nature enthusiasts                </p>
+            </div>
+        </div>
+        <div class="forest-item">
+            <img src="bia_forest.jpg" alt="Bia National Park" onclick="alert('Bia National Park Image Clicked!')">
+            <div class="text">
+Bia National Park: Biodiversity Hotspot</h3>
+                <p>Bia National Park is a UNESCO Biosphere Reserve, known for its rich biodiversity. The park features both deciduous and evergreen forests, providing habitat for a wide range of flora and fauna. Notable species include the bongo antelope and various primate species. It's a crucial area for conservation.                <p>
+                    [700+ words about Bia National Park]
+                </p>
+            </div>
+        </div>
+        <div class="forest-item">
+            <img src="ankasa_forest.jpg" alt="Ankasa Conservation Area" onclick="alert('Ankasa Conservation Area Image Clicked!')">
+            <div class="text">
+                <h3>Ankasa Conservation Area: Pristine Rainforest</h3>
+                <p>
+                    [700+ words about Ankasa Conservation Area]
+                </p>
+            </div>
+        </div>
+        <div class="forest-item">
+            <img src="Visit Ghana_ The Official Tourism Website of Ghana.jpg" alt="Shai Hills Resource Reserve" onclick="alert('Shai Hills Resource Reserve Image Clicked!')">
+            <div class="text">
+                <h3>Shai Hills Resource Reserve: Savannah and Woodland</h3>
+                <p>
+                    <p>
+                        Shai Hills Resource Reserve, located in the Greater Accra Region of Ghana, presents a unique blend of savannah grasslands and woodland ecosystems. Established in 1962, this reserve spans approximately 47 square kilometers and serves as a crucial habitat for a variety of wildlife. Unlike the dense rainforests found in other parts of Ghana, Shai Hills offers a glimpse into the transitional landscapes that characterize the region, providing a rich mosaic of habitats that support a diverse range of species.
+                        <br><br>
+                        The reserve is home to several primate species, including the olive baboon, the Mona monkey, and the Patas monkey, which are often seen foraging in the woodlands or resting in the shade of trees. Other wildlife includes antelopes, bushbucks, and a variety of reptiles and amphibians. Birdlife is abundant, with numerous species recorded, making it a popular destination for birdwatchers. The reserve's diverse habitats, ranging from rocky outcrops to grasslands and woodlands, support a wide range of flora and fauna.
+                        <br><br>
+                        The vegetation in Shai Hills is characterized by a mix of grasses, shrubs, and trees, reflecting the transitional nature of the ecosystem. The savannah grasslands are dominated by various grass species, while the woodlands feature trees such as the baobab, the acacia, and the shea tree. The reserve's flora also includes numerous medicinal plants, many of which are used in traditional healing practices. The rocky outcrops provide unique microhabitats for specialized plant species, adding to the reserve's ecological diversity.
+                        <br><br>
+                        Conservation efforts in Shai Hills focus on protecting its biodiversity and promoting sustainable resource management. The reserve's management works closely with local communities to ensure that their traditional rights and livelihoods are respected. Eco-tourism activities, such as guided nature walks, wildlife viewing, and rock climbing, provide visitors with opportunities to experience the reserve's natural beauty while supporting conservation goals. The reserve also serves as an important research site, with ongoing studies focusing on wildlife ecology, vegetation dynamics, and the impacts of human activities.
+                        <br><br>
+                        Shai Hills holds significant cultural value for the local communities. The area is home to several sacred sites and traditional shrines, reflecting the deep connection between the people and the land. Traditional beliefs and practices, such as the observance of taboos and the use of natural resources in a sustainable manner, play a crucial role in protecting the reserve's resources. The reserve's management works closely with local communities to integrate traditional knowledge into conservation strategies, ensuring that cultural values are respected and preserved.
+                        <br><br>
+                        Visiting Shai Hills Resource Reserve offers a unique opportunity to explore the transitional landscapes of Ghana and appreciate the importance of conservation. The reserve's diverse habitats, abundant wildlife, and cultural significance make it a valuable destination for nature lovers and cultural enthusiasts. The reserve's commitment to sustainable tourism and community involvement sets an example for other protected areas, demonstrating that conservation and development can go hand in hand.
+                        <br><br>
+                        Challenges remain, of course. Encroachment, illegal hunting, and unsustainable resource use are ongoing threats to the reserve's integrity. However, the dedication of park rangers, researchers, and local communities provides hope for the future. By continuing to support conservation efforts and promoting responsible tourism, we can ensure that Shai Hills Resource Reserve remains a sanctuary for wildlife and a source of inspiration for generations to come.
+                    </p>
+                    <p>                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li>&copy; Ministry of Tourism GHANA</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const forestItems = document.querySelectorAll('.forest-item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        forestItems.forEach((item) => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
+

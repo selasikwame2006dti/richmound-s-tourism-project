@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripes of the Savannah: Zebras in Ghana</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #333;
+            overflow-x: hidden;
+            font-size: 16px; 
+            background-color: #666565;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a, .nav-button {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(5px);
+        }
+.text p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+}
+
+
+        .intro-section {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background-image: url('sutirta-budiman-Jgiv1rSIpVM-unsplash.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .intro-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .intro-section div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .zebra-section {
+            padding: 20px; /* Reduced padding for mobile */
+        }
+
+        .zebra-item {
+            display: flex;
+            flex-direction: column; /* Stacked layout for mobile */
+            width: 95%; /* Increased width for mobile */
+            margin: 20px auto; 
+            opacity: 0;
+            transform: translateX(-50px); 
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .zebra-item.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .zebra-item img {
+            max-width: 100%; /* Full width images on mobile */
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-bottom: 10px; /* Space between image and text */
+        }
+
+        .zebra-item img:hover {
+            transform: scale(1.02); /* Reduced scale on mobile hover */
+        }
+
+        .zebra-item .text {
+            flex-grow: 1;
+            padding: 10px; /* Reduced padding for mobile */
+        }
+
+        .zebra-item.right img {
+            order: 0; /* Reset order for mobile */
+        }
+
+        .zebra-item.right .text {
+            order: 1; /* Reset order for mobile */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        footer h4 {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (min-width: 768px) { 
+            .zebra-section {
+                padding: 40px;
+            }
+
+            .zebra-item {
+                flex-direction: row;
+                width: 90%;
+                margin: 40px auto;
+                transform: translateX(-50px); /* Slide in from left */
+            }
+
+            .zebra-item img {
+                max-width: 40%;
+            }
+
+            .zebra-item.right img {
+                order: 2;
+            }
+
+            .zebra-item.right .text {
+                order: 1;
+            }
+
+            .zebra-item img:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        @media (max-width: 200px){
+            body{
+                font-size: 14px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="ghtour.png" alt="" height="50px" width="200px"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="places.html">Contact</a></li>
+                <li><button class="nav-button">Sign Up</button></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="intro-section">
+        <div>
+            <h1>Stripes of the Savannah: Zebras in Ghana</h1>
+            <p>Exploring the unique beauty of zebras in Ghana's wildlife.</p>
+        </div>
+    </section>
+
+    <section class="zebra-section">
+        <div class="zebra-item">
+            <img src="geranimo-N9s3FjzsstM-unsplash.jpg" alt="Zebra 1" onclick="alert('Image 1 clicked!')">
+            <div class="text">
+                <h3>Zebras in Mole National Park</h3>
+                <p>
+                    Mole National Park, Ghana's premier wildlife sanctuary, provides a habitat for a variety of animals, though zebra sightings are less common compared to other African regions. The zebras found here are primarily the Burchell's zebra, known for their variable stripe patterns. While not as abundant as in East or Southern Africa, their presence adds to the park's rich biodiversity. Their grazing habits play a crucial role in maintaining the park's grasslands, preventing overgrowth and allowing other species to thrive. Zebras in Mole often form small herds, moving across the savannah in search of fresh grazing. Their ability to adapt to the park's seasonal changes and varying vegetation highlights their resilience. Visitors to Mole National Park might catch glimpses of these striking animals during early morning or late afternoon drives, when they are most active. Understanding their ecological role in the park helps visitors appreciate the delicate balance of the savannah ecosystem. The park's management continues to monitor zebra populations, ensuring their conservation and contributing to the overall health of the wildlife community.                </p>
+            </div>
+        </div>
+        <div class="zebra-item right">
+            <img src="82835538-1271-4230-8d66-8bf3a1cccec9.jpg" alt="Zebra 2" onclick="alert('Image 2 clicked!')">
+            <div class="text">
+                <h3>Habitat and Distribution</h3>
+                <p>
+                    Zebras in Ghana are primarily concentrated within the boundaries of Mole National Park, reflecting the park's role as a vital refuge for wildlife. The park's diverse habitats, ranging from open savannahs to woodlands and riverine areas, provide suitable conditions for zebras to thrive. Their distribution within the park is influenced by factors such as water availability, grazing quality, and predator presence. Seasonal variations in rainfall and vegetation affect their movements, with zebras often congregating around water sources during the dry season. Their preference for grasslands and open woodlands aligns with their grazing needs, allowing them to feed on a variety of grasses and herbaceous plants. The park's management efforts, including habitat protection and anti-poaching measures, contribute to maintaining a stable environment for zebras. Understanding their habitat preferences and distribution patterns is essential for effective conservation strategies. Researchers continue to study their movements and behavior, providing valuable insights into their ecology and contributing to the park's overall wildlife management.                </p>
+            </div>
+        </div>
+        <div class="zebra-item">
+            <img src="sutirta-budiman-Jgiv1rSIpVM-unsplash.jpg" alt="Zebra 3" onclick="alert('Image 3 clicked!')">
+            <div class="text">
+                <h3>Conservation and Challenges</h3>
+                <p>
+                    Zebras in Ghana face several conservation challenges, primarily centered on habitat loss and human encroachment. As human populations expand, the boundaries of protected areas like Mole National Park come under increasing pressure. Encroachment for agriculture and settlement reduces available grazing land, affecting zebra populations. Climate change also poses a threat, with altered rainfall patterns and increased temperatures impacting vegetation and water availability. Poaching, though less prevalent than for other species, remains a concern, particularly in areas bordering the park. Conservation efforts focus on strengthening park management, enhancing anti-poaching patrols, and engaging local communities in sustainable land use practices. Community-based conservation initiatives aim to create a balance between human needs and wildlife protection. Research and monitoring programs provide valuable data on zebra populations and their ecological requirements, informing conservation strategies. Raising awareness about the importance of zebras and their role in the ecosystem is crucial for garnering public support and ensuring their long-term survival.                </p>
+            </div>
+        </div>
+        <div class="zebra-item">
+            <img src="A zebra-da-planície_ características e habitat.jpg" alt="Zebra 4" onclick="alert('Image 4 clicked!')">
+            <div class="text">
+                <h3>Zebra Facts</h3>
+                <p>
+                    Zebras are known for their distinctive black and white stripes, which serve as camouflage and may also help regulate body temperature and deter biting insects. Each zebra has a unique stripe pattern, much like human fingerprints. Zebras are social animals, living in herds that can range from small family groups to large aggregations. They are primarily grazers, feeding on grasses and other vegetation. Zebras are equipped with strong teeth and powerful jaws, allowing them to efficiently process tough grasses. They have excellent eyesight and hearing, which help them detect predators and navigate their surroundings. Zebras are known for their speed and agility, enabling them to escape predators and cover long distances in search of food and water. They communicate through a variety of vocalizations, including barks, snorts, and whinnies. Zebras play a vital role in maintaining the balance of savannah ecosystems, influencing vegetation composition and nutrient cycling. Their presence contributes to the biodiversity and ecological health of their habitats.                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Services</h4>
+            <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Connect</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script>
+        const zebraItems = document.querySelectorAll('.zebra-item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        zebraItems.forEach((item) => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
+
